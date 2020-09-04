@@ -1,0 +1,6 @@
+framework module Pods_CrissCross {
+  umbrella header "Pods-CrissCross-umbrella.h"
+
+  export *
+  module * { export * }
+}

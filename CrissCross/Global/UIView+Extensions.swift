@@ -9,9 +9,9 @@
 import UIKit
 
 extension UIView {
-    static func create(_ builder: (Self) -> Void) -> Self {
-        let view = Self.init()
-        builder(view)
-        return view
+    func addSubviews(_ views: UIView...) {
+        views.forEach { self.addSubview($0) }
     }
 }
+
+

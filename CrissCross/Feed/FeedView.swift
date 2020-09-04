@@ -6,11 +6,14 @@
 //  Copyright © 2020 Kilo Loco. All rights reserved.
 //
 
+import Combine
 import UIKit
 
 final class FeedView: UIView {
 
-    private var collectionView: UICollectionView = {
+    var focusPublisher = PassthroughSubject<Int, Never>()
+    
+    private lazy var collectionView: UICollectionView = {
         
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
@@ -20,9 +23,10 @@ final class FeedView: UIView {
         
         let screen = UIScreen.main.bounds
         
+        let bottomPadding: CGFloat = UIDevice.current.hasNotch ? -50 : 0
         let layoutGroupSize = NSCollectionLayoutSize(
             widthDimension: .absolute(screen.width),
-            heightDimension: .absolute(screen.height)
+            heightDimension: .absolute(screen.height - bottomPadding)
         )
         let group = NSCollectionLayoutGroup.vertical(
             layoutSize: layoutGroupSize,
@@ -31,16 +35,25 @@ final class FeedView: UIView {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets.top = -48
+        let inset: CGFloat = -48
+        section.contentInsets.top = inset
+        section.visibleItemsInvalidationHandler = { [weak self] (items, offset, environment) in
+            
+            
+            
+            let offset = offset.y + inset
+            let contentHeight = environment.container.contentSize.height
+            let focusIndex = Int(offset) / Int(contentHeight)
+            self?.focusPublisher.send(focusIndex)
+        }
         
         let configuration = UICollectionViewCompositionalLayoutConfiguration()
         configuration.scrollDirection = .horizontal
         let layout = UICollectionViewCompositionalLayout(section: section, configuration: configuration)
         
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.backgroundColor = .yellow
+        collectionView.backgroundColor = .black
         return collectionView
     }()
 

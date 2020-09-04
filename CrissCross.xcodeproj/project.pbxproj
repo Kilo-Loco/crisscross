@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19DC355ABEC8BD950C40E660 /* Pods_CrissCross.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69582E9BC9FA43A0E93123DA /* Pods_CrissCross.framework */; };
+		9E22067E250283F600252CE3 /* test.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9E22067D250283F500252CE3 /* test.mov */; };
+		9E22068025028CD100252CE3 /* UIDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E22067F25028CD100252CE3 /* UIDevice+Extensions.swift */; };
+		9E2206822502CC9200252CE3 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206812502CC9200252CE3 /* UIStackView+Extensions.swift */; };
+		9E2206842502CD5E00252CE3 /* Creatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206832502CD5E00252CE3 /* Creatable.swift */; };
+		9E2206862502D2BA00252CE3 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206852502D2BA00252CE3 /* DateService.swift */; };
 		9EB71AC52501DDD300F6817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AC42501DDD300F6817D /* AppDelegate.swift */; };
 		9EB71AC72501DDD300F6817D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AC62501DDD300F6817D /* SceneDelegate.swift */; };
 		9EB71ACE2501DDD500F6817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB71ACD2501DDD500F6817D /* Assets.xcassets */; };
@@ -24,9 +30,21 @@
 		9EE0097C2501EFB0001B8377 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0097B2501EFB0001B8377 /* VideoView.swift */; };
 		9EE0097E2501F4B4001B8377 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0097D2501F4B4001B8377 /* UIColor+Extensions.swift */; };
 		9EE009802501F4F5001B8377 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0097F2501F4F5001B8377 /* CGFloat+Extensions.swift */; };
+		9EE009822502012D001B8377 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE009812502012D001B8377 /* TabBarController.swift */; };
+		9EE00988250206B9001B8377 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE00987250206B9001B8377 /* InboxViewController.swift */; };
+		9EE0098A25020713001B8377 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0098925020713001B8377 /* DiscoverViewController.swift */; };
+		9EE0098C25020731001B8377 /* PublicProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0098B25020731001B8377 /* PublicProfileViewController.swift */; };
+		9EE0098E2502074F001B8377 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE0098D2502074F001B8377 /* NewPostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		58AE865DEC3EAB3F7F85F456 /* Pods-CrissCross.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrissCross.debug.xcconfig"; path = "Target Support Files/Pods-CrissCross/Pods-CrissCross.debug.xcconfig"; sourceTree = "<group>"; };
+		69582E9BC9FA43A0E93123DA /* Pods_CrissCross.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrissCross.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E22067D250283F500252CE3 /* test.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.mov; sourceTree = "<group>"; };
+		9E22067F25028CD100252CE3 /* UIDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extensions.swift"; sourceTree = "<group>"; };
+		9E2206812502CC9200252CE3 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
+		9E2206832502CD5E00252CE3 /* Creatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creatable.swift; sourceTree = "<group>"; };
+		9E2206852502D2BA00252CE3 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		9EB71AC12501DDD300F6817D /* CrissCross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrissCross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB71AC42501DDD300F6817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EB71AC62501DDD300F6817D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +64,12 @@
 		9EE0097B2501EFB0001B8377 /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		9EE0097D2501F4B4001B8377 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		9EE0097F2501F4F5001B8377 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		9EE009812502012D001B8377 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9EE00987250206B9001B8377 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		9EE0098925020713001B8377 /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		9EE0098B25020731001B8377 /* PublicProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicProfileViewController.swift; sourceTree = "<group>"; };
+		9EE0098D2502074F001B8377 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
+		EF06AD914FB082746B391D64 /* Pods-CrissCross.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrissCross.release.xcconfig"; path = "Target Support Files/Pods-CrissCross/Pods-CrissCross.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,17 +77,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19DC355ABEC8BD950C40E660 /* Pods_CrissCross.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0AADD036CB53217CEAEC8B4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69582E9BC9FA43A0E93123DA /* Pods_CrissCross.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EB71AB82501DDD300F6817D = {
 			isa = PBXGroup;
 			children = (
 				9EB71AC32501DDD300F6817D /* CrissCross */,
 				9EB71AC22501DDD300F6817D /* Products */,
+				9EDEFD5ED4EC636EE93F8C50 /* Pods */,
+				0AADD036CB53217CEAEC8B4A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,11 +113,16 @@
 		9EB71AC32501DDD300F6817D /* CrissCross */ = {
 			isa = PBXGroup;
 			children = (
-				9EE0097A2501EF9A001B8377 /* VideoPlayer */,
+				9EE009852502066A001B8377 /* Chat */,
 				9EB71AE42501E6EF00F6817D /* CollectionViewManager */,
-				9EB71ADD2501DF4E00F6817D /* Global */,
+				9EE0098325020654001B8377 /* Discover */,
 				9EB71AD82501DED200F6817D /* Feed */,
+				9EB71ADD2501DF4E00F6817D /* Global */,
+				9EE009842502065F001B8377 /* Post */,
+				9EE0098625020671001B8377 /* Profile */,
+				9EE0097A2501EF9A001B8377 /* VideoPlayer */,
 				9EB71AC42501DDD300F6817D /* AppDelegate.swift */,
+				9E22067D250283F500252CE3 /* test.mov */,
 				9EB71AC62501DDD300F6817D /* SceneDelegate.swift */,
 				9EB71ACD2501DDD500F6817D /* Assets.xcassets */,
 				9EB71ACF2501DDD500F6817D /* LaunchScreen.storyboard */,
@@ -111,6 +151,11 @@
 				9EE009782501EF1B001B8377 /* Reusable.swift */,
 				9EE0097D2501F4B4001B8377 /* UIColor+Extensions.swift */,
 				9EE0097F2501F4F5001B8377 /* CGFloat+Extensions.swift */,
+				9EE009812502012D001B8377 /* TabBarController.swift */,
+				9E22067F25028CD100252CE3 /* UIDevice+Extensions.swift */,
+				9E2206812502CC9200252CE3 /* UIStackView+Extensions.swift */,
+				9E2206832502CD5E00252CE3 /* Creatable.swift */,
+				9E2206852502D2BA00252CE3 /* DateService.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -124,12 +169,53 @@
 			path = CollectionViewManager;
 			sourceTree = "<group>";
 		};
+		9EDEFD5ED4EC636EE93F8C50 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58AE865DEC3EAB3F7F85F456 /* Pods-CrissCross.debug.xcconfig */,
+				EF06AD914FB082746B391D64 /* Pods-CrissCross.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		9EE0097A2501EF9A001B8377 /* VideoPlayer */ = {
 			isa = PBXGroup;
 			children = (
 				9EE0097B2501EFB0001B8377 /* VideoView.swift */,
 			);
 			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		9EE0098325020654001B8377 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0098925020713001B8377 /* DiscoverViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		9EE009842502065F001B8377 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0098D2502074F001B8377 /* NewPostViewController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		9EE009852502066A001B8377 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				9EE00987250206B9001B8377 /* InboxViewController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		9EE0098625020671001B8377 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9EE0098B25020731001B8377 /* PublicProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,9 +225,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EB71AD52501DDD500F6817D /* Build configuration list for PBXNativeTarget "CrissCross" */;
 			buildPhases = (
+				644B79DBCE16902FBF3AA450 /* [CP] Check Pods Manifest.lock */,
 				9EB71ABD2501DDD300F6817D /* Sources */,
 				9EB71ABE2501DDD300F6817D /* Frameworks */,
 				9EB71ABF2501DDD300F6817D /* Resources */,
+				4182359B556A6A28E51653F3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +278,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E22067E250283F600252CE3 /* test.mov in Resources */,
 				9EB71AD12501DDD500F6817D /* LaunchScreen.storyboard in Resources */,
 				9EB71ACE2501DDD500F6817D /* Assets.xcassets in Resources */,
 			);
@@ -197,26 +286,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4182359B556A6A28E51653F3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrissCross/Pods-CrissCross-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CrissCross/Pods-CrissCross-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CrissCross/Pods-CrissCross-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		644B79DBCE16902FBF3AA450 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrissCross-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9EB71ABD2501DDD300F6817D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9EE009792501EF1B001B8377 /* Reusable.swift in Sources */,
+				9E2206822502CC9200252CE3 /* UIStackView+Extensions.swift in Sources */,
+				9EE009822502012D001B8377 /* TabBarController.swift in Sources */,
+				9E2206862502D2BA00252CE3 /* DateService.swift in Sources */,
+				9EE00988250206B9001B8377 /* InboxViewController.swift in Sources */,
 				9EE009802501F4F5001B8377 /* CGFloat+Extensions.swift in Sources */,
 				9EE009712501EB4F001B8377 /* FeedCollectionViewManager.swift in Sources */,
 				9EE009772501EEA0001B8377 /* ClipCell.swift in Sources */,
 				9EE009732501EB98001B8377 /* Clip.swift in Sources */,
 				9EB71AE12501E02400F6817D /* UIView+Extensions.swift in Sources */,
 				9EB71ADC2501DF1B00F6817D /* FeedView.swift in Sources */,
+				9EE0098E2502074F001B8377 /* NewPostViewController.swift in Sources */,
+				9EE0098A25020713001B8377 /* DiscoverViewController.swift in Sources */,
 				9EB71AE62501E76F00F6817D /* SingleSection.swift in Sources */,
 				9EB71AE32501E68E00F6817D /* CollectionViewManager.swift in Sources */,
 				9EB71AC52501DDD300F6817D /* AppDelegate.swift in Sources */,
 				9EB71ADA2501DEFC00F6817D /* FeedViewController.swift in Sources */,
+				9EE0098C25020731001B8377 /* PublicProfileViewController.swift in Sources */,
 				9EE009752501EBF0001B8377 /* User.swift in Sources */,
 				9EE0097E2501F4B4001B8377 /* UIColor+Extensions.swift in Sources */,
 				9EB71AC72501DDD300F6817D /* SceneDelegate.swift in Sources */,
 				9EE0097C2501EFB0001B8377 /* VideoView.swift in Sources */,
+				9E22068025028CD100252CE3 /* UIDevice+Extensions.swift in Sources */,
+				9E2206842502CD5E00252CE3 /* Creatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,11 +490,13 @@
 		};
 		9EB71AD62501DDD500F6817D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58AE865DEC3EAB3F7F85F456 /* Pods-CrissCross.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K99777NES;
 				INFOPLIST_FILE = CrissCross/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -362,17 +504,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiloloco.CrissCross;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		9EB71AD72501DDD500F6817D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF06AD914FB082746B391D64 /* Pods-CrissCross.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5K99777NES;
 				INFOPLIST_FILE = CrissCross/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -380,7 +524,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kiloloco.CrissCross;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -14,6 +14,8 @@ class CollectionViewManager<Section: Hashable, Item: Hashable>: NSObject, UIColl
     var cellForRow: UICollectionViewDiffableDataSource<Section, Item>.CellProvider?
     
     var selectedItemPublisher = PassthroughSubject<Item, Never>()
+    var willDisplayCellPublisher = PassthroughSubject<(cell: UICollectionViewCell, indexPath: IndexPath), Never>()
+    var cellDisappearedPublisher = PassthroughSubject<(cell: UICollectionViewCell, indexPath: IndexPath), Never>()
     
     private var collectionView: UICollectionView?
     
@@ -21,6 +23,7 @@ class CollectionViewManager<Section: Hashable, Item: Hashable>: NSObject, UIColl
     
     func manage(_ collectionView: UICollectionView) {
         collectionView.delegate = self
+
         self.collectionView = collectionView
         
         dataSource = UICollectionViewDiffableDataSource(collectionView: collectionView) { [weak self] in
@@ -39,6 +42,22 @@ class CollectionViewManager<Section: Hashable, Item: Hashable>: NSObject, UIColl
             $0.appendSections([section])
             $0.appendItems(items)
         }
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        willDisplay cell: UICollectionViewCell,
+        forItemAt indexPath: IndexPath
+    ) {
+        willDisplayCellPublisher.send((cell, indexPath))
+    }
+    
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didEndDisplaying cell: UICollectionViewCell,
+        forItemAt indexPath: IndexPath
+    ) {
+        cellDisappearedPublisher.send((cell, indexPath))
     }
 }
 

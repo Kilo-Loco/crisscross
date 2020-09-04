@@ -12,6 +12,7 @@ struct Clip {
     let id: String
     let username: String
     let caption: String
+    let creationDate: Date
     
 }
 

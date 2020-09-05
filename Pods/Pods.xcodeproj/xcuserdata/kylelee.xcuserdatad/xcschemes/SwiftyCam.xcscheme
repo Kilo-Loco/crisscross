@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C23DB88E45B0ED14F0C8827BE9C46C95"
-               BuildableName = "MarqueeLabel.framework"
-               BlueprintName = "MarqueeLabel"
+               BlueprintIdentifier = "64D8AA920E37251A430220E5E4088BDA"
+               BuildableName = "SwiftyCam.framework"
+               BlueprintName = "SwiftyCam"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

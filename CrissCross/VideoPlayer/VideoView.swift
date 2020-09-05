@@ -50,6 +50,10 @@ final class VideoView: UIView {
     
     func prepareVideo(at path: String) {
         let url = URL(fileURLWithPath: path)
+        prepareVideo(at: url)
+    }
+    
+    func prepareVideo(at url: URL) {
         let playerItem = AVPlayerItem(url: url)
         let player = AVQueuePlayer(playerItem: playerItem)
         

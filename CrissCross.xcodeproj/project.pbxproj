@@ -13,6 +13,9 @@
 		9E2206822502CC9200252CE3 /* UIStackView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206812502CC9200252CE3 /* UIStackView+Extensions.swift */; };
 		9E2206842502CD5E00252CE3 /* Creatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206832502CD5E00252CE3 /* Creatable.swift */; };
 		9E2206862502D2BA00252CE3 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206852502D2BA00252CE3 /* DateService.swift */; };
+		9E2206882502EDA200252CE3 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206872502EDA200252CE3 /* NewPostView.swift */; };
+		9E22068A2502F3B600252CE3 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206892502F3B600252CE3 /* PreviewView.swift */; };
+		9E6788ED250309BF007824BD /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788EC250309BF007824BD /* PreviewViewController.swift */; };
 		9EB71AC52501DDD300F6817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AC42501DDD300F6817D /* AppDelegate.swift */; };
 		9EB71AC72501DDD300F6817D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AC62501DDD300F6817D /* SceneDelegate.swift */; };
 		9EB71ACE2501DDD500F6817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB71ACD2501DDD500F6817D /* Assets.xcassets */; };
@@ -45,6 +48,9 @@
 		9E2206812502CC9200252CE3 /* UIStackView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extensions.swift"; sourceTree = "<group>"; };
 		9E2206832502CD5E00252CE3 /* Creatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creatable.swift; sourceTree = "<group>"; };
 		9E2206852502D2BA00252CE3 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
+		9E2206872502EDA200252CE3 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
+		9E2206892502F3B600252CE3 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
+		9E6788EC250309BF007824BD /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		9EB71AC12501DDD300F6817D /* CrissCross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrissCross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB71AC42501DDD300F6817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EB71AC62501DDD300F6817D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				9EE0098D2502074F001B8377 /* NewPostViewController.swift */,
+				9E2206872502EDA200252CE3 /* NewPostView.swift */,
+				9E2206892502F3B600252CE3 /* PreviewView.swift */,
+				9E6788EC250309BF007824BD /* PreviewViewController.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -342,9 +351,11 @@
 				9EE009712501EB4F001B8377 /* FeedCollectionViewManager.swift in Sources */,
 				9EE009772501EEA0001B8377 /* ClipCell.swift in Sources */,
 				9EE009732501EB98001B8377 /* Clip.swift in Sources */,
+				9E2206882502EDA200252CE3 /* NewPostView.swift in Sources */,
 				9EB71AE12501E02400F6817D /* UIView+Extensions.swift in Sources */,
 				9EB71ADC2501DF1B00F6817D /* FeedView.swift in Sources */,
 				9EE0098E2502074F001B8377 /* NewPostViewController.swift in Sources */,
+				9E22068A2502F3B600252CE3 /* PreviewView.swift in Sources */,
 				9EE0098A25020713001B8377 /* DiscoverViewController.swift in Sources */,
 				9EB71AE62501E76F00F6817D /* SingleSection.swift in Sources */,
 				9EB71AE32501E68E00F6817D /* CollectionViewManager.swift in Sources */,
@@ -357,6 +368,7 @@
 				9EE0097C2501EFB0001B8377 /* VideoView.swift in Sources */,
 				9E22068025028CD100252CE3 /* UIDevice+Extensions.swift in Sources */,
 				9E2206842502CD5E00252CE3 /* Creatable.swift in Sources */,
+				9E6788ED250309BF007824BD /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

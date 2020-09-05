@@ -1,16 +1,16 @@
 PODS:
-  - MarqueeLabel (4.0.2)
+  - SwiftyCam (4.0.0)
 
 DEPENDENCIES:
-  - MarqueeLabel
+  - SwiftyCam
 
 SPEC REPOS:
   trunk:
-    - MarqueeLabel
+    - SwiftyCam
 
 SPEC CHECKSUMS:
-  MarqueeLabel: f762aa681ae201f66c1d511858b171f75d83013a
+  SwiftyCam: 6e57914771d972fbe508e759dc9d0150a44a93fd
 
-PODFILE CHECKSUM: 21845793f09dd2d6dcc36287e0b32497e519fbc3
+PODFILE CHECKSUM: 91f91eecd86110397be7e3586908a028d6928020
 
 COCOAPODS: 1.9.3

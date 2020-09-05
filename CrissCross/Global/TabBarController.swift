@@ -23,7 +23,7 @@ class TabBarController: UITabBarController {
         tabBar(tabBar, didSelect: firstItem)
         
     }
-
+    
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         tabBar.tintColor = item.tag == 0 ? .white : .black
         tabBar.barStyle = item.tag == 0 ? .black : .default
@@ -31,7 +31,13 @@ class TabBarController: UITabBarController {
         if item.tag == 2 {
             let newPostVC = NewPostViewController()
             newPostVC.modalPresentationStyle = .overFullScreen
-            present(newPostVC, animated: true)
+            present(newPostVC, animated: true) { [weak self] in
+                self?.selectedIndex = 1
+            }
         }
+    }
+    
+    func popAllPresentedControllers() {
+        print(presentedViewController)
     }
 }

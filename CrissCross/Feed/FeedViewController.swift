@@ -6,6 +6,7 @@
 //  Copyright © 2020 Kilo Loco. All rights reserved.
 //
 
+import AVFoundation
 import Combine
 import UIKit
 
@@ -31,6 +32,12 @@ final class FeedViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playback, mode: .moviePlayback)
+        } catch {
+            print("Setting category to AVAudioSessionCategoryPlayback failed.")
+        }
         currentCell?.togglePlay(on: true)
     }
     

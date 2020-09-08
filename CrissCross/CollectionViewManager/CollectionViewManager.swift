@@ -44,6 +44,12 @@ class CollectionViewManager<Section: Hashable, Item: Hashable>: NSObject, UIColl
         }
     }
     
+    func append(_ item: Item, in section: Section) {
+        guard var currentSnapshot = dataSource?.snapshot() else { return }
+        currentSnapshot.appendItems([item], toSection: section)
+        dataSource?.apply(currentSnapshot)
+    }
+    
     func collectionView(
         _ collectionView: UICollectionView,
         willDisplay cell: UICollectionViewCell,
@@ -64,5 +70,9 @@ class CollectionViewManager<Section: Hashable, Item: Hashable>: NSObject, UIColl
 extension CollectionViewManager where Section == SingleSection {
     func set(_ items: [Item]) {
         self.set(items, in: .main)
+    }
+    
+    func append(_ item: Item) {
+        self.append(item, in: .main)
     }
 }

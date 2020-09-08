@@ -6,11 +6,14 @@
 //  Copyright © 2020 Kilo Loco. All rights reserved.
 //
 
+import Amplify
 import Combine
 import UIKit
 
 final class PreviewViewController: UIViewController {
 
+    private var uploadVideoToken: AnyCancellable?
+    
     private var actionToken: AnyCancellable?
     
     private let ui = PreviewView()
@@ -73,6 +76,31 @@ final class PreviewViewController: UIViewController {
         print(user)
         print(caption)
         
-        presentingViewController?.dismiss(animated: true)
+        let key = UUID().uuidString + ".mov"
+        
+        
+        uploadVideoToken = Amplify.Storage.uploadFile(key: key, local: videoUrl)
+            .resultPublisher
+            .mapError { _ in UploadError.storage }
+            .flatMap { _ -> AnyPublisher<Clip, UploadError> in
+                let now = Temporal.DateTime(Date())
+                let clip = Clip(username: user, caption: caption, creationDate: now, videoKey: key)
+                return Amplify.DataStore.save(clip)
+                    .mapError { _ in UploadError.dataStore }
+                    .eraseToAnyPublisher()
+            }
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { print($0) },
+                receiveValue: { [weak self] in
+                    print("saved clip:", $0)
+                    self?.presentingViewController?.dismiss(animated: true)
+                }
+            )
     }
+}
+
+enum UploadError: Error {
+    case storage
+    case dataStore
 }

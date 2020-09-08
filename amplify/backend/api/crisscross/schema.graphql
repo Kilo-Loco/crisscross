@@ -1,0 +1,7 @@
+type Clip @model {
+  id: ID!
+  username: String!
+  caption: String!
+  creationDate: AWSDateTime!
+  videoKey: String!
+}

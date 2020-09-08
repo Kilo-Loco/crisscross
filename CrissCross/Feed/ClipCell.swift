@@ -6,12 +6,14 @@
 //  Copyright © 2020 Kilo Loco. All rights reserved.
 //
 
+import Amplify
 import Combine
 import UIKit
 
 final class ClipCell: UICollectionViewCell {
     
     let actionPublisher = PassthroughSubject<Action, Never>()
+    private var downloadVideoToken: AnyCancellable?
     
     private lazy var videoView = VideoView.create {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -254,17 +256,24 @@ final class ClipCell: UICollectionViewCell {
     func populate(with clip: Clip) {
         self.clip = clip
         
-        let videoPath = Bundle.main.path(forResource: "test", ofType: "mov")!
-        videoView.prepareVideo(at: videoPath)
+        downloadVideoToken = VideoDownloader.shared.getLocalVideoURL(for: clip.videoKey)
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { print($0) },
+                receiveValue: { [weak self] in
+                    self?.videoView.prepareVideo(at: $0.absoluteString)
+//                    self?.togglePlay(on: true)
+                }
+            )
         
-        handleLabel.text = "@kilo_loco"
-        dateLabel.text = "• \(DateService.shared.formatter.string(from: Date()))"
-        captionLabel.text = "That boi needs Jesus!"
-        soundLabel.text = "@kilo_loco Original Sound"
+        handleLabel.text = "@\(clip.username)"
+        dateLabel.text = "• \(DateService.shared.formatter.string(from: clip.creationDate.foundationDate))"
+        captionLabel.text = clip.caption
+        soundLabel.text = "@\(clip.username) Original Sound"
         
-        likeCountLabel.text = "500"
-        commentCountLabel.text = "100"
-        shareCountLabel.text = "200"
+        likeCountLabel.text = "\(Int.random(in: 0 ... 1000))"
+        commentCountLabel.text = "\(Int.random(in: 0 ... 1000))"
+        shareCountLabel.text = "\(Int.random(in: 0 ... 1000))"
     }
     
     func togglePlay(on: Bool) {

@@ -16,6 +16,13 @@
 		9E2206882502EDA200252CE3 /* NewPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206872502EDA200252CE3 /* NewPostView.swift */; };
 		9E22068A2502F3B600252CE3 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2206892502F3B600252CE3 /* PreviewView.swift */; };
 		9E6788ED250309BF007824BD /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788EC250309BF007824BD /* PreviewViewController.swift */; };
+		9E6788F225031673007824BD /* Clip+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788EF25031673007824BD /* Clip+Schema.swift */; };
+		9E6788F325031673007824BD /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788F025031673007824BD /* AmplifyModels.swift */; };
+		9E6788F425031673007824BD /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788F125031673007824BD /* Clip.swift */; };
+		9E6788F625031715007824BD /* Clip+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788F525031715007824BD /* Clip+Extensions.swift */; };
+		9E6788F925031886007824BD /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6788F725031885007824BD /* amplifyconfiguration.json */; };
+		9E6788FA25031886007824BD /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 9E6788F825031885007824BD /* awsconfiguration.json */; };
+		9E6788FC25031DD6007824BD /* VideoDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6788FB25031DD6007824BD /* VideoDownloader.swift */; };
 		9EB71AC52501DDD300F6817D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AC42501DDD300F6817D /* AppDelegate.swift */; };
 		9EB71AC72501DDD300F6817D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AC62501DDD300F6817D /* SceneDelegate.swift */; };
 		9EB71ACE2501DDD500F6817D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB71ACD2501DDD500F6817D /* Assets.xcassets */; };
@@ -26,7 +33,6 @@
 		9EB71AE32501E68E00F6817D /* CollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AE22501E68E00F6817D /* CollectionViewManager.swift */; };
 		9EB71AE62501E76F00F6817D /* SingleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB71AE52501E76F00F6817D /* SingleSection.swift */; };
 		9EE009712501EB4F001B8377 /* FeedCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE009702501EB4F001B8377 /* FeedCollectionViewManager.swift */; };
-		9EE009732501EB98001B8377 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE009722501EB98001B8377 /* Clip.swift */; };
 		9EE009752501EBF0001B8377 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE009742501EBF0001B8377 /* User.swift */; };
 		9EE009772501EEA0001B8377 /* ClipCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE009762501EEA0001B8377 /* ClipCell.swift */; };
 		9EE009792501EF1B001B8377 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE009782501EF1B001B8377 /* Reusable.swift */; };
@@ -51,6 +57,13 @@
 		9E2206872502EDA200252CE3 /* NewPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostView.swift; sourceTree = "<group>"; };
 		9E2206892502F3B600252CE3 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		9E6788EC250309BF007824BD /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		9E6788EF25031673007824BD /* Clip+Schema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Clip+Schema.swift"; sourceTree = "<group>"; };
+		9E6788F025031673007824BD /* AmplifyModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmplifyModels.swift; sourceTree = "<group>"; };
+		9E6788F125031673007824BD /* Clip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
+		9E6788F525031715007824BD /* Clip+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Clip+Extensions.swift"; sourceTree = "<group>"; };
+		9E6788F725031885007824BD /* amplifyconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = amplifyconfiguration.json; sourceTree = SOURCE_ROOT; };
+		9E6788F825031885007824BD /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = SOURCE_ROOT; };
+		9E6788FB25031DD6007824BD /* VideoDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDownloader.swift; sourceTree = "<group>"; };
 		9EB71AC12501DDD300F6817D /* CrissCross.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrissCross.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB71AC42501DDD300F6817D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EB71AC62501DDD300F6817D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +76,6 @@
 		9EB71AE22501E68E00F6817D /* CollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewManager.swift; sourceTree = "<group>"; };
 		9EB71AE52501E76F00F6817D /* SingleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSection.swift; sourceTree = "<group>"; };
 		9EE009702501EB4F001B8377 /* FeedCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewManager.swift; sourceTree = "<group>"; };
-		9EE009722501EB98001B8377 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		9EE009742501EBF0001B8377 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9EE009762501EEA0001B8377 /* ClipCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipCell.swift; sourceTree = "<group>"; };
 		9EE009782501EF1B001B8377 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -98,6 +110,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9E6788EE25031673007824BD /* models */ = {
+			isa = PBXGroup;
+			children = (
+				9E6788EF25031673007824BD /* Clip+Schema.swift */,
+				9E6788F025031673007824BD /* AmplifyModels.swift */,
+				9E6788F125031673007824BD /* Clip.swift */,
+			);
+			name = models;
+			path = amplify/generated/models;
+			sourceTree = SOURCE_ROOT;
+		};
 		9EB71AB82501DDD300F6817D = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +142,9 @@
 		9EB71AC32501DDD300F6817D /* CrissCross */ = {
 			isa = PBXGroup;
 			children = (
+				9E6788F725031885007824BD /* amplifyconfiguration.json */,
+				9E6788F825031885007824BD /* awsconfiguration.json */,
+				9E6788EE25031673007824BD /* models */,
 				9EE009852502066A001B8377 /* Chat */,
 				9EB71AE42501E6EF00F6817D /* CollectionViewManager */,
 				9EE0098325020654001B8377 /* Discover */,
@@ -143,8 +169,8 @@
 				9EB71AD92501DEFC00F6817D /* FeedViewController.swift */,
 				9EB71ADB2501DF1B00F6817D /* FeedView.swift */,
 				9EE009702501EB4F001B8377 /* FeedCollectionViewManager.swift */,
-				9EE009722501EB98001B8377 /* Clip.swift */,
 				9EE009762501EEA0001B8377 /* ClipCell.swift */,
+				9E6788FB25031DD6007824BD /* VideoDownloader.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -162,6 +188,7 @@
 				9E2206812502CC9200252CE3 /* UIStackView+Extensions.swift */,
 				9E2206832502CD5E00252CE3 /* Creatable.swift */,
 				9E2206852502D2BA00252CE3 /* DateService.swift */,
+				9E6788F525031715007824BD /* Clip+Extensions.swift */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -287,9 +314,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6788FA25031886007824BD /* awsconfiguration.json in Resources */,
 				9E22067E250283F600252CE3 /* test.mov in Resources */,
 				9EB71AD12501DDD500F6817D /* LaunchScreen.storyboard in Resources */,
 				9EB71ACE2501DDD500F6817D /* Assets.xcassets in Resources */,
+				9E6788F925031886007824BD /* amplifyconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,14 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EE009792501EF1B001B8377 /* Reusable.swift in Sources */,
+				9E6788F625031715007824BD /* Clip+Extensions.swift in Sources */,
+				9E6788FC25031DD6007824BD /* VideoDownloader.swift in Sources */,
 				9E2206822502CC9200252CE3 /* UIStackView+Extensions.swift in Sources */,
 				9EE009822502012D001B8377 /* TabBarController.swift in Sources */,
 				9E2206862502D2BA00252CE3 /* DateService.swift in Sources */,
 				9EE00988250206B9001B8377 /* InboxViewController.swift in Sources */,
 				9EE009802501F4F5001B8377 /* CGFloat+Extensions.swift in Sources */,
 				9EE009712501EB4F001B8377 /* FeedCollectionViewManager.swift in Sources */,
+				9E6788F425031673007824BD /* Clip.swift in Sources */,
 				9EE009772501EEA0001B8377 /* ClipCell.swift in Sources */,
-				9EE009732501EB98001B8377 /* Clip.swift in Sources */,
+				9E6788F325031673007824BD /* AmplifyModels.swift in Sources */,
 				9E2206882502EDA200252CE3 /* NewPostView.swift in Sources */,
 				9EB71AE12501E02400F6817D /* UIView+Extensions.swift in Sources */,
 				9EB71ADC2501DF1B00F6817D /* FeedView.swift in Sources */,
@@ -362,6 +394,7 @@
 				9EB71AC52501DDD300F6817D /* AppDelegate.swift in Sources */,
 				9EB71ADA2501DEFC00F6817D /* FeedViewController.swift in Sources */,
 				9EE0098C25020731001B8377 /* PublicProfileViewController.swift in Sources */,
+				9E6788F225031673007824BD /* Clip+Schema.swift in Sources */,
 				9EE009752501EBF0001B8377 /* User.swift in Sources */,
 				9EE0097E2501F4B4001B8377 /* UIColor+Extensions.swift in Sources */,
 				9EB71AC72501DDD300F6817D /* SceneDelegate.swift in Sources */,

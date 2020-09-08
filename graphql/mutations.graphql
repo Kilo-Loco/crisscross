@@ -1,0 +1,52 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateClip(
+  $input: CreateClipInput!
+  $condition: ModelClipConditionInput
+) {
+  createClip(input: $input, condition: $condition) {
+    id
+    username
+    caption
+    creationDate
+    videoKey
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateClip(
+  $input: UpdateClipInput!
+  $condition: ModelClipConditionInput
+) {
+  updateClip(input: $input, condition: $condition) {
+    id
+    username
+    caption
+    creationDate
+    videoKey
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteClip(
+  $input: DeleteClipInput!
+  $condition: ModelClipConditionInput
+) {
+  deleteClip(input: $input, condition: $condition) {
+    id
+    username
+    caption
+    creationDate
+    videoKey
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}

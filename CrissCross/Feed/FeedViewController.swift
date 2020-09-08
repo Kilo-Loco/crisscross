@@ -6,16 +6,24 @@
 //  Copyright © 2020 Kilo Loco. All rights reserved.
 //
 
+import Amplify
 import AVFoundation
 import Combine
 import UIKit
 
 final class FeedViewController: UIViewController {
 
+    private var getClipsToken: AnyCancellable?
+    private var observeNewClipsToken: AnyCancellable?
     private var willDisplayCellToken: AnyCancellable?
     private var cellDisappearedToken: AnyCancellable?
     private var cellTokens = [IndexPath: AnyCancellable]()
-    private var currentCell: ClipCell?
+    private var currentCell: ClipCell? {
+        didSet {
+            oldValue?.togglePlay(on: false)
+            currentCell?.togglePlay(on: true)
+        }
+    }
     
     private let feedManager = FeedCollectionViewManager()
     private let ui = FeedView()
@@ -28,6 +36,7 @@ final class FeedViewController: UIViewController {
         super.viewDidLoad()
         configure()
         getClips()
+        observeNewClips()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -80,7 +89,7 @@ final class FeedViewController: UIViewController {
                 return (clipCell, event.indexPath)
             }
             .sink { [weak self] in
-                $0.cell.togglePlay(on: false)
+//                $0.cell.togglePlay(on: false)
                 self?.cellTokens[$0.indexPath] = nil
             }
         
@@ -88,9 +97,38 @@ final class FeedViewController: UIViewController {
     }
     
     private func getClips() {
-        let clips = Array(0 ..< 20).map { Clip(id: String($0), username: UUID().uuidString, caption: "", creationDate: Date()) }
-        feedManager.set(clips)
+        getClipsToken = Amplify.DataStore.query(Clip.self)
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: { print($0) },
+                receiveValue: { [weak self] in self?.feedManager.set($0) }
+            )
+        
+//        let date = Temporal.DateTime(Date())
+//        let clips = Array(0 ..< 20).map { Clip(id: String($0), username: UUID().uuidString, caption: "", creationDate: date) }
+//        feedManager.set(clips)
     }
+    
+    private func observeNewClips() {
+        observeNewClipsToken = Amplify.DataStore.publisher(for: Clip.self)
+            .compactMap { event -> Clip? in
+                let mutationType = MutationEvent.MutationType(rawValue: event.mutationType)
+                guard mutationType == .create else { return nil }
+                return try? event.decodeModel(as: Clip.self)
+            }
+            .receive(on: DispatchQueue.main)
+            .sink(
+                receiveCompletion: {
+                    print($0)
+            },
+                receiveValue: { [weak self] clip in
+                    print(clip)
+                    self?.feedManager.append(clip)
+                }
+            )
+    }
+    
+    
     
     private func handle(_ action: ClipCell.Action) {
         switch action {

@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-crisscross-dev-173223-authRole",
+      "UnauthRoleArn": "arn:aws:iam::088987693321:role/amplify-crisscross-dev-173223-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::088987693321:role/amplify-crisscross-dev-173223-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-crisscross-dev-173223-deployment",
+      "UnauthRoleName": "amplify-crisscross-dev-173223-unauthRole",
+      "StackName": "amplify-crisscross-dev-173223",
+      "StackId": "arn:aws:cloudformation:us-west-2:088987693321:stack/amplify-crisscross-dev-173223/44fb4fd0-ef0f-11ea-8913-0a867df5496f",
+      "AmplifyAppId": "d23j6ehmj8oiuw"
+    },
+    "categories": {
+      "auth": {
+        "crisscrossacac68f2": {}
+      }
+    }
+  }
+}

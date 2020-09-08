@@ -36,8 +36,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         return vc
     }
     
-    private var newPostVC: NewPostViewController {
-        let vc = NewPostViewController()
+    private var newPostVC: UIViewController {
+        // blank since new post is presented modally
+        let vc = UIViewController()
         let tabBarItem = UITabBarItem(
             title: nil,
             image: UIImage(systemName: "plus.rectangle.fill"),

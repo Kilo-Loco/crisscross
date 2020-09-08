@@ -56,7 +56,6 @@ final class VideoView: UIView {
     func prepareVideo(at url: URL) {
         let playerItem = AVPlayerItem(url: url)
         let player = AVQueuePlayer(playerItem: playerItem)
-        
         queuePlayer = player
         playerLayer.player = queuePlayer
         

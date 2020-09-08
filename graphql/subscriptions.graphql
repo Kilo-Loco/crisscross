@@ -1,0 +1,43 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateClip {
+  onCreateClip {
+    id
+    username
+    caption
+    creationDate
+    videoKey
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateClip {
+  onUpdateClip {
+    id
+    username
+    caption
+    creationDate
+    videoKey
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteClip {
+  onDeleteClip {
+    id
+    username
+    caption
+    creationDate
+    videoKey
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
